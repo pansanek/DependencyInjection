@@ -1,4 +1,4 @@
-package com.example.dependencyinjectionstart.example2.domain
+package com.mirea.dependencyinjection.example2.domain
 
 interface ExampleRepository {
 

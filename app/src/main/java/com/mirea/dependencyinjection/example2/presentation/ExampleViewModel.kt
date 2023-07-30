@@ -1,12 +1,12 @@
-package com.example.dependencyinjectionstart.example2.presentation
+package com.mirea.dependencyinjection.example2.presentation
 
-import com.example.dependencyinjectionstart.example2.domain.ExampleUseCase
+import com.mirea.dependencyinjection.example2.domain.ExampleUseCase
 
 class ExampleViewModel(
     private val useCase: ExampleUseCase
 ) {
 
     fun method() {
-
+        useCase()
     }
 }
