@@ -4,7 +4,12 @@ import com.mirea.dependencyinjection.example1.Component
 
 class Activity {
 
-    val computer: Computer = Component().getComputer()
+    lateinit var computer: Computer
+    lateinit var keyboard: Keyboard
+
+    init {
+        Component().inject(this)
+    }
 
 
 }
