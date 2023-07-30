@@ -1,14 +1,10 @@
 package com.example.dependencyinjectionstart.example1
 
+import com.mirea.dependencyinjection.example1.Component
+
 class Activity {
 
-    val monitor = Monitor()
-    val keyboard = Keyboard()
-    val mouse = Mouse()
-    val computerTower = ComputerTower(
-        Storage(),
-        Memory(),
-        Processor()
-    )
-    val computer = Computer(monitor, computerTower, keyboard, mouse)
+    val computer: Computer = Component().getComputer()
+
+
 }
