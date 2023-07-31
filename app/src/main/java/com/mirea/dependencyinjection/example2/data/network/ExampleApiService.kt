@@ -1,8 +1,9 @@
 package com.mirea.dependencyinjection.example2.data.network
 
 import android.util.Log
+import javax.inject.Inject
 
-class ExampleApiService {
+class ExampleApiService @Inject constructor(){
 
     fun method() {
         Log.d(LOG_TAG, "ExampleApiService")

@@ -1,6 +1,5 @@
 package com.example.dependencyinjectionstart.example1
 
-import com.mirea.dependencyinjection.example1.DaggerNewComponent
 import javax.inject.Inject
 
 class Activity {
@@ -9,7 +8,7 @@ class Activity {
     lateinit var computer: Computer
 
     init {
-        DaggerNewComponent.create().inject(this)
+        //DaggerNewComponent.create().inject(this)
     }
 
 
