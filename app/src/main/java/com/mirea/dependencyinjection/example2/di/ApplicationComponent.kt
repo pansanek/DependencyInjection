@@ -4,6 +4,7 @@ import android.content.Context
 import com.mirea.dependencyinjection.example2.data.database.ExampleDatabase
 import com.mirea.dependencyinjection.example2.presentation.ExampleViewModel
 import com.mirea.dependencyinjection.example2.presentation.MainActivity
+import com.mirea.dependencyinjection.example2.presentation.MainActivity2
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -17,6 +18,7 @@ interface ApplicationComponent {
 
     fun getDatabase(): ExampleDatabase
     fun inject(activity: MainActivity)
+    fun inject(activity: MainActivity2)
 
 //    @Component.Builder
 //    interface ApplicationComponentBuilder{

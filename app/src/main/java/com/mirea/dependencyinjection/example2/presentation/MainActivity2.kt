@@ -1,10 +1,8 @@
 package com.mirea.dependencyinjection.example2.presentation
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.mirea.dependencyinjection.R
 import com.mirea.dependencyinjection.example2.ExampleApp
@@ -12,7 +10,7 @@ import com.mirea.dependencyinjection.example2.data.database.ExampleDatabase
 import com.mirea.dependencyinjection.example2.di.DaggerApplicationComponent
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
@@ -34,10 +32,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         viewModel.method()
         viewModel2.method()
-        findViewById<TextView>(R.id.tv_hw).setOnClickListener {
-            Intent(this,MainActivity2::class.java).apply {
-                startActivity(this)
-            }
-        }
     }
 }
