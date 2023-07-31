@@ -1,12 +1,14 @@
 package com.mirea.dependencyinjection.example2.data.database
 
+import android.content.Context
 import android.util.Log
+import com.mirea.dependencyinjection.R
 import javax.inject.Inject
 
-class ExampleDatabase @Inject constructor() {
+class ExampleDatabase @Inject constructor(private val context:Context) {
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleDatabase")
+        Log.d(LOG_TAG, "ExampleDatabase ${context.getString(R.string.app_name)}")
     }
 
     companion object {

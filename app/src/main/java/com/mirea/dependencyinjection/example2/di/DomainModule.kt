@@ -4,11 +4,10 @@ import com.mirea.dependencyinjection.example2.data.repository.ExampleRepositoryI
 import com.mirea.dependencyinjection.example2.domain.ExampleRepository
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 
 @Module
 interface DomainModule {
-
-
     @Binds
-    fun provideRepository(impl:ExampleRepositoryImpl):ExampleRepository
+    fun bindRepository(impl:ExampleRepositoryImpl):ExampleRepository
 }
