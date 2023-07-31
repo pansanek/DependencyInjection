@@ -13,7 +13,9 @@ class MainActivity : AppCompatActivity() {
 
 
     private val component by lazy {
-        DaggerApplicationComponent.builder().context(application).time(System.currentTimeMillis()).build() }
+        //DaggerApplicationComponent.builder().context(application).time(System.currentTimeMillis()).build() }
+        DaggerApplicationComponent.factory().create(application,System.currentTimeMillis())
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)
         super.onCreate(savedInstanceState)
