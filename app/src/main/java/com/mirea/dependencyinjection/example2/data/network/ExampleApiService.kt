@@ -4,11 +4,16 @@ import android.content.Context
 import android.util.Log
 import com.mirea.dependencyinjection.R
 import javax.inject.Inject
+import javax.inject.Singleton
 
-class ExampleApiService @Inject constructor(private val context: Context,private val time:Long){
+@Singleton
+class ExampleApiService @Inject constructor(
+    private val context: Context,
+    private val timeMillis: Long
+) {
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleApiService ${context.getString(R.string.app_name)} ${time}")
+        Log.d(LOG_TAG, "ExampleApiService ${context.getString(R.string.app_name)} $timeMillis $this")
     }
 
     companion object {
