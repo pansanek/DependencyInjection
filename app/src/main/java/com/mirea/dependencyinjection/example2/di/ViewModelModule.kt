@@ -6,7 +6,6 @@ import com.mirea.dependencyinjection.example2.presentation.ExampleViewModel2
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import dagger.multibindings.StringKey
 
 @Module
 interface ViewModelModule {
@@ -14,7 +13,7 @@ interface ViewModelModule {
     @IntoMap
     @ViewModelKey(ExampleViewModel::class)
     @Binds
-    fun bindExampleViewModel(impl:ExampleViewModel): ViewModel
+    fun bindExampleViewModel(impl: ExampleViewModel): ViewModel
 
     @IntoMap
     @ViewModelKey(ExampleViewModel2::class)
